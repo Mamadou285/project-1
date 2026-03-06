@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    /*coffee background */
+    background: linear-gradient(135deg, #3b241d, #7a4a35, #2a1a14);
+}
+
+.container {
+    width: min(720px, 92vw);
+    background: #fff7f3;
+    border-radius: 16px;
+    padding: 34px 28px;
+    text-align: center;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .35);
+}
+
+h1 {
+    margin: 0 0 8px 0;
+    color: #2b1712;
+    font-size: 40px;
+}
+
+#subtitle {
+    margin: 0 0 18px 0;
+    color: #3b241d;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #5a3428;
+    color: #fff;
+    font-weight: 600;
+    transition: transform .18s ease, background .18s ease;
+}
+
+/*hover animation */
+button:hover {
+    background: #3e1f17;
+    transform: translateY(-2px);
+}
+
+#story {
+    min-height: 24px;
+    margin: 10px 0 0 0;
+    color: #2b1712;
+
+    /*fade effect */
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+
+#story.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.restart {
+    margin-top: 18px;
+    width: 100%;
+    background: #2c1712;
+}
+
+.restart:hover {
+    background: #1f0f0b;
+}
+
+/* card comes in */
+.fade-up {
+    animation: fadeUp .55s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
